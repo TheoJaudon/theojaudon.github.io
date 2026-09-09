@@ -1,0 +1,325 @@
+/* =====================================================
+   SITE PERSONNEL — STYLE
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTENEUR PRINCIPAL
+   ===================================================== */
+
+.container {
+    width: 760px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   EN-TÊTE
+   ===================================================== */
+
+header {
+    padding-top: 45px;
+    padding-bottom: 10px;
+}
+
+.site-title {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: normal;
+
+    color: #111111;
+}
+
+.site-subtitle {
+    margin-top: 5px;
+
+    color: #555555;
+    font-size: 14px;
+}
+
+header hr {
+    margin-top: 22px;
+
+    border: 0;
+    border-top: 1px solid #999999;
+}
+
+
+/* =====================================================
+   INFORMATIONS PERSONNELLES
+   ===================================================== */
+
+.identity {
+    margin-top: 25px;
+}
+
+.identity p {
+    margin: 3px 0;
+}
+
+.identity .position {
+    font-weight: bold;
+}
+
+.identity .institution {
+    color: #444444;
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+.navigation {
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    padding: 10px 0;
+
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.navigation a {
+    margin-right: 18px;
+
+    color: #0645ad;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.navigation a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   CONTENU
+   ===================================================== */
+
+main {
+    padding-bottom: 50px;
+}
+
+.page-title {
+    margin: 0 0 25px;
+
+    font-size: 25px;
+    font-weight: normal;
+
+    color: #111111;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    font-size: 19px;
+    font-weight: normal;
+
+    color: #222222;
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+
+/* =====================================================
+   LIENS
+   ===================================================== */
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   LISTES
+   ===================================================== */
+
+ul {
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+
+/* =====================================================
+   LISTES ACADÉMIQUES
+   ===================================================== */
+
+.publication {
+    margin-bottom: 18px;
+}
+
+.publication-title {
+    font-weight: normal;
+}
+
+.publication-authors {
+    color: #444444;
+}
+
+.publication-journal {
+    font-style: italic;
+    color: #555555;
+}
+
+
+/* =====================================================
+   CV
+   ===================================================== */
+
+.cv-section {
+    margin-bottom: 35px;
+}
+
+.cv-item {
+    margin-bottom: 15px;
+}
+
+.cv-date {
+    display: inline-block;
+
+    width: 120px;
+
+    vertical-align: top;
+
+    color: #555555;
+}
+
+.cv-description {
+    display: inline-block;
+
+    width: calc(100% - 125px);
+
+    vertical-align: top;
+}
+
+
+/* =====================================================
+   SÉPARATEURS
+   ===================================================== */
+
+hr {
+    margin: 30px 0;
+
+    border: 0;
+    border-top: 1px solid #dddddd;
+}
+
+
+/* =====================================================
+   PAGE D'ACCUEIL
+   ===================================================== */
+
+.welcome {
+    margin-top: 35px;
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+.note {
+    color: #666666;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PIED DE PAGE
+   ===================================================== */
+
+footer {
+    padding: 20px 0 40px;
+
+    border-top: 1px solid #dddddd;
+
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: auto;
+        max-width: calc(100% - 30px);
+    }
+
+    header {
+        padding-top: 25px;
+    }
+
+    .site-title {
+        font-size: 26px;
+    }
+
+    .navigation a {
+        display: inline-block;
+
+        margin-right: 12px;
+        margin-bottom: 5px;
+    }
+
+    .cv-date,
+    .cv-description {
+        display: block;
+        width: 100%;
+    }
+
+    .cv-date {
+        margin-bottom: 3px;
+    }
+}
