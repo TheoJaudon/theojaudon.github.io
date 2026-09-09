@@ -7,16 +7,16 @@
    GENERAL
    ----------------------------------------------------- */
 
-html {
-    margin: 0;
-    padding: 0;
-}
-
+html,
 body {
     margin: 0;
     padding: 0;
 
+    width: 100%;
+    min-height: 100%;
+
     background: #ffffff;
+
     color: #222222;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -27,14 +27,112 @@ body {
 
 
 /* -----------------------------------------------------
-   MAIN PAGE
+   LAYOUT
    ----------------------------------------------------- */
 
-.container {
-    width: 850px;
-    max-width: calc(100% - 40px);
+.page {
+    display: flex;
 
-    margin: 0 auto;
+    min-height: 100vh;
+}
+
+
+/* -----------------------------------------------------
+   LEFT BLUE SIDEBAR
+   ----------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 190px;
+    height: 100vh;
+
+    background-color: #0066a1;
+
+    padding: 35px 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------------------
+   NAME IN SIDEBAR
+   ----------------------------------------------------- */
+
+.sidebar-name {
+    margin: 0 0 45px 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: normal;
+
+    line-height: 1.3;
+}
+
+
+/* -----------------------------------------------------
+   NAVIGATION
+   ----------------------------------------------------- */
+
+.navigation {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.navigation a {
+    display: block;
+
+    padding: 8px 0;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+
+.navigation a:hover {
+    color: #dceeff;
+
+    text-decoration: underline;
+}
+
+
+.navigation a.active {
+    font-weight: bold;
+
+    color: #ffffff;
+}
+
+
+/* -----------------------------------------------------
+   MAIN CONTENT
+   ----------------------------------------------------- */
+
+.main {
+    margin-left: 190px;
+
+    width: calc(100% - 190px);
+
+    padding: 40px 60px 60px 60px;
+
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------------------
+   CONTENT WIDTH
+   ----------------------------------------------------- */
+
+.content {
+    max-width: 850px;
 }
 
 
@@ -42,44 +140,41 @@ body {
    HEADER
    ----------------------------------------------------- */
 
-header {
-    padding-top: 30px;
-}
-
-
-/* Name */
-
 .site-title {
     margin: 0;
 
-    color: #222222;
+    font-size: 30px;
 
-    font-size: 28px;
     font-weight: normal;
+
+    color: #222222;
 }
 
 
-/* Description below name */
-
 .site-subtitle {
-    margin: 3px 0 18px;
+    margin: 4px 0 25px;
 
-    color: #555555;
+    color: #666666;
 
     font-size: 14px;
 }
 
 
-/* Horizontal line */
+/* -----------------------------------------------------
+   PHOTO
+   ----------------------------------------------------- */
 
-header hr {
-    height: 3px;
+.profile-photo {
+    margin: 20px 0 25px;
+}
 
-    margin: 0;
 
-    border: 0;
+.profile-photo img {
+    display: block;
 
-    background: #0055a4;
+    width: 150px;
+
+    height: auto;
 }
 
 
@@ -88,8 +183,7 @@ header hr {
    ----------------------------------------------------- */
 
 .identity {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -104,73 +198,23 @@ header hr {
 
 
 /* -----------------------------------------------------
-   NAVIGATION
+   PAGE TITLE
    ----------------------------------------------------- */
-
-.navigation {
-    margin-top: 22px;
-
-    padding: 8px 0;
-
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
-}
-
-
-.navigation a {
-    margin-right: 25px;
-
-    color: #0055a4;
-
-    text-decoration: none;
-
-    font-size: 14px;
-}
-
-
-.navigation a:hover {
-    color: #cc0000;
-
-    text-decoration: underline;
-}
-
-
-/* Current page */
-
-.navigation a.active {
-    color: #222222;
-
-    font-weight: bold;
-}
-
-
-/* -----------------------------------------------------
-   CONTENT
-   ----------------------------------------------------- */
-
-main {
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
-
-
-/* Main page title */
 
 .page-title {
-    margin: 0 0 25px;
-
-    padding-left: 12px;
-
-    border-left: 5px solid #0055a4;
+    margin: 35px 0 25px;
 
     color: #222222;
 
-    font-size: 24px;
+    font-size: 25px;
+
     font-weight: normal;
 }
 
 
-/* Section titles */
+/* -----------------------------------------------------
+   HEADINGS
+   ----------------------------------------------------- */
 
 h2 {
     margin: 28px 0 10px;
@@ -178,6 +222,7 @@ h2 {
     color: #333333;
 
     font-size: 18px;
+
     font-weight: bold;
 }
 
@@ -188,11 +233,14 @@ h3 {
     color: #333333;
 
     font-size: 15px;
+
     font-weight: bold;
 }
 
 
-/* Paragraphs */
+/* -----------------------------------------------------
+   TEXT
+   ----------------------------------------------------- */
 
 p {
     margin: 0 0 14px;
@@ -204,7 +252,7 @@ p {
    ----------------------------------------------------- */
 
 a {
-    color: #0055a4;
+    color: #0066a1;
 
     text-decoration: none;
 }
@@ -223,6 +271,7 @@ a:hover {
 
 ul {
     margin-top: 8px;
+
     margin-bottom: 20px;
 
     padding-left: 25px;
@@ -235,7 +284,7 @@ li {
 
 
 /* -----------------------------------------------------
-   HORIZONTAL SEPARATORS
+   SEPARATORS
    ----------------------------------------------------- */
 
 hr {
@@ -248,53 +297,13 @@ hr {
 
 
 /* -----------------------------------------------------
-   RESEARCH / PUBLICATIONS
-   ----------------------------------------------------- */
-
-.research-item {
-    margin-bottom: 20px;
-}
-
-
-.research-item .year {
-    color: #666666;
-}
-
-
-/* Publication */
-
-.publication {
-    margin-bottom: 20px;
-}
-
-
-.publication-title {
-    margin-bottom: 3px;
-}
-
-
-.publication-authors {
-    color: #444444;
-
-    margin-bottom: 3px;
-}
-
-
-.publication-journal {
-    color: #555555;
-
-    font-style: italic;
-}
-
-
-/* -----------------------------------------------------
    FOOTER
    ----------------------------------------------------- */
 
 footer {
     margin-top: 50px;
 
-    padding: 15px 0 35px;
+    padding-top: 15px;
 
     border-top: 1px solid #dddddd;
 
@@ -310,33 +319,52 @@ footer {
 
 @media (max-width: 700px) {
 
-    .container {
-        width: auto;
-
-        max-width: calc(100% - 30px);
+    .page {
+        display: block;
     }
 
 
-    header {
-        padding-top: 20px;
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 20px 25px;
     }
 
 
-    .site-title {
-        font-size: 25px;
+    .sidebar-name {
+        margin-bottom: 20px;
+    }
+
+
+    .navigation {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 0 25px;
     }
 
 
     .navigation a {
-        display: inline-block;
-
-        margin-right: 18px;
-        margin-bottom: 4px;
+        padding: 5px 0;
     }
 
 
-    main {
-        margin-top: 25px;
+    .main {
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 30px 25px 50px;
+    }
+
+
+    .site-title {
+        font-size: 26px;
     }
 
 }
