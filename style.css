@@ -1,15 +1,11 @@
-/* =========================================================
-   SITE PERSONNEL
-  ========================================================= */
+/* =====================================================
+   PERSONAL ACADEMIC WEBSITE
+   ===================================================== */
 
 
-/* ---------------------------------------------------------
-   RESET
-   --------------------------------------------------------- */
-
-* {
-    box-sizing: border-box;
-}
+/* -----------------------------------------------------
+   GENERAL
+   ----------------------------------------------------- */
 
 html {
     margin: 0;
@@ -25,128 +21,48 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-
-/* ---------------------------------------------------------
-   BARRE LATERALE
-   --------------------------------------------------------- */
-
-.sidebar {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 190px;
-    height: 100vh;
-
-    background: #0055a4;
-
-    padding: 45px 25px;
-
-    color: white;
-}
-
-
-/* Nom dans la barre */
-
-.sidebar-name {
-    margin: 0 0 40px 0;
-
-    font-size: 22px;
-    font-weight: normal;
-
-    line-height: 1.3;
-}
-
-
-/* ---------------------------------------------------------
-   MENU
-   --------------------------------------------------------- */
-
-.sidebar nav {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 0;
-}
-
-
-.sidebar nav a {
-    display: block;
-
-    padding: 7px 0;
-
-    color: white;
-
-    text-decoration: none;
-
     font-size: 14px;
+    line-height: 1.55;
 }
 
 
-.sidebar nav a:hover {
-    color: #d9ecff;
+/* -----------------------------------------------------
+   MAIN PAGE
+   ----------------------------------------------------- */
 
-    text-decoration: underline;
+.container {
+    width: 850px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
 }
 
 
-/* Page actuellement visitée */
-
-.sidebar nav a.active {
-    font-weight: bold;
-}
-
-
-/* ---------------------------------------------------------
-   CONTENU PRINCIPAL
-   --------------------------------------------------------- */
-
-.page {
-    margin-left: 190px;
-
-    min-height: 100vh;
-
-    padding: 45px 60px 60px 60px;
-}
-
-
-/* ---------------------------------------------------------
-   LARGEUR DU CONTENU
-   --------------------------------------------------------- */
-
-.content {
-    width: 100%;
-    max-width: 900px;
-}
-
-
-/* ---------------------------------------------------------
+/* -----------------------------------------------------
    HEADER
-   --------------------------------------------------------- */
+   ----------------------------------------------------- */
 
-.site-header {
-    margin-bottom: 25px;
+header {
+    padding-top: 30px;
 }
 
+
+/* Name */
 
 .site-title {
     margin: 0;
 
-    color: #111111;
+    color: #222222;
 
-    font-size: 30px;
+    font-size: 28px;
     font-weight: normal;
 }
 
 
+/* Description below name */
+
 .site-subtitle {
-    margin: 5px 0 20px;
+    margin: 3px 0 18px;
 
     color: #555555;
 
@@ -154,26 +70,31 @@ body {
 }
 
 
-.site-header hr {
+/* Horizontal line */
+
+header hr {
+    height: 3px;
+
     margin: 0;
 
     border: 0;
 
-    border-top: 1px solid #999999;
+    background: #0055a4;
 }
 
 
-/* ---------------------------------------------------------
-   INFORMATIONS PERSONNELLES
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   PERSONAL INFORMATION
+   ----------------------------------------------------- */
 
 .identity {
-    margin: 25px 0 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
 .identity p {
-    margin: 3px 0;
+    margin: 2px 0;
 }
 
 
@@ -182,60 +103,105 @@ body {
 }
 
 
-.identity .institution {
-    color: #444444;
+/* -----------------------------------------------------
+   NAVIGATION
+   ----------------------------------------------------- */
+
+.navigation {
+    margin-top: 22px;
+
+    padding: 8px 0;
+
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
 }
 
 
-/* ---------------------------------------------------------
-   TITRES
-   --------------------------------------------------------- */
+.navigation a {
+    margin-right: 25px;
 
-.page-title {
-    margin: 0 0 30px;
+    color: #0055a4;
 
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.navigation a:hover {
+    color: #cc0000;
+
+    text-decoration: underline;
+}
+
+
+/* Current page */
+
+.navigation a.active {
     color: #222222;
 
-    font-size: 26px;
-    font-weight: normal;
-}
-
-
-h2 {
-    margin: 30px 0 12px;
-
-    color: #222222;
-
-    font-size: 19px;
-    font-weight: normal;
-}
-
-
-h3 {
-    margin: 25px 0 8px;
-
-    font-size: 16px;
     font-weight: bold;
 }
 
 
-/* ---------------------------------------------------------
-   TEXTE
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   CONTENT
+   ----------------------------------------------------- */
+
+main {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+
+/* Main page title */
+
+.page-title {
+    margin: 0 0 25px;
+
+    padding-left: 12px;
+
+    border-left: 5px solid #0055a4;
+
+    color: #222222;
+
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+/* Section titles */
+
+h2 {
+    margin: 28px 0 10px;
+
+    color: #333333;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+h3 {
+    margin: 20px 0 8px;
+
+    color: #333333;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* Paragraphs */
 
 p {
-    margin: 0 0 15px;
+    margin: 0 0 14px;
 }
 
 
-section {
-    margin-bottom: 30px;
-}
-
-
-/* ---------------------------------------------------------
-   LIENS
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   LINKS
+   ----------------------------------------------------- */
 
 a {
     color: #0055a4;
@@ -251,28 +217,29 @@ a:hover {
 }
 
 
-/* ---------------------------------------------------------
-   LISTES
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   LISTS
+   ----------------------------------------------------- */
 
 ul {
-    margin: 10px 0 20px;
+    margin-top: 8px;
+    margin-bottom: 20px;
 
     padding-left: 25px;
 }
 
 
 li {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 
-/* ---------------------------------------------------------
-   SEPARATEURS
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   HORIZONTAL SEPARATORS
+   ----------------------------------------------------- */
 
 hr {
-    margin: 30px 0;
+    margin: 28px 0;
 
     border: 0;
 
@@ -280,12 +247,24 @@ hr {
 }
 
 
-/* ---------------------------------------------------------
-   PUBLICATIONS
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   RESEARCH / PUBLICATIONS
+   ----------------------------------------------------- */
+
+.research-item {
+    margin-bottom: 20px;
+}
+
+
+.research-item .year {
+    color: #666666;
+}
+
+
+/* Publication */
 
 .publication {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 
@@ -295,9 +274,9 @@ hr {
 
 
 .publication-authors {
-    margin-bottom: 3px;
-
     color: #444444;
+
+    margin-bottom: 3px;
 }
 
 
@@ -308,13 +287,14 @@ hr {
 }
 
 
-/* ---------------------------------------------------------
+/* -----------------------------------------------------
    FOOTER
-   --------------------------------------------------------- */
+   ----------------------------------------------------- */
 
 footer {
-    margin-top: 60px;
-    padding-top: 15px;
+    margin-top: 50px;
+
+    padding: 15px 0 35px;
 
     border-top: 1px solid #dddddd;
 
@@ -324,50 +304,39 @@ footer {
 }
 
 
-/* ---------------------------------------------------------
-   VERSION MOBILE
-   --------------------------------------------------------- */
+/* -----------------------------------------------------
+   MOBILE
+   ----------------------------------------------------- */
 
 @media (max-width: 700px) {
 
-    .sidebar {
-        position: relative;
+    .container {
+        width: auto;
 
-        width: 100%;
-        height: auto;
-
-        padding: 25px 25px;
+        max-width: calc(100% - 30px);
     }
 
 
-    .sidebar-name {
-        margin-bottom: 20px;
+    header {
+        padding-top: 20px;
     }
 
 
-    .sidebar nav {
-        flex-direction: row;
-
-        flex-wrap: wrap;
-
-        gap: 0 20px;
+    .site-title {
+        font-size: 25px;
     }
 
 
-    .sidebar nav a {
-        padding: 4px 0;
+    .navigation a {
+        display: inline-block;
+
+        margin-right: 18px;
+        margin-bottom: 4px;
     }
 
 
-    .page {
-        margin-left: 0;
-
-        padding: 30px 25px 50px;
-    }
-
-
-    .content {
-        max-width: none;
+    main {
+        margin-top: 25px;
     }
 
 }
