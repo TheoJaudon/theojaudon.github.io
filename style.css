@@ -1,13 +1,20 @@
-/* =====================================================
-   SITE PERSONNEL — STYLE
-   ===================================================== */
+/* =========================================================
+   SITE PERSONNEL
+   Style académique inspiré du site de François Loeser
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   RESET
+   --------------------------------------------------------- */
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -18,308 +25,350 @@ body {
     color: #222222;
 
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 15px;
     line-height: 1.6;
 }
 
 
-/* =====================================================
-   CONTENEUR PRINCIPAL
-   ===================================================== */
+/* ---------------------------------------------------------
+   BARRE LATERALE
+   --------------------------------------------------------- */
 
-.container {
-    width: 760px;
-    max-width: calc(100% - 40px);
+.sidebar {
+    position: fixed;
 
-    margin: 0 auto;
+    top: 0;
+    left: 0;
+
+    width: 190px;
+    height: 100vh;
+
+    background: #0055a4;
+
+    padding: 45px 25px;
+
+    color: white;
 }
 
 
-/* =====================================================
-   EN-TÊTE
-   ===================================================== */
+/* Nom dans la barre */
 
-header {
-    padding-top: 45px;
-    padding-bottom: 10px;
+.sidebar-name {
+    margin: 0 0 40px 0;
+
+    font-size: 22px;
+    font-weight: normal;
+
+    line-height: 1.3;
 }
+
+
+/* ---------------------------------------------------------
+   MENU
+   --------------------------------------------------------- */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+}
+
+
+.sidebar nav a {
+    display: block;
+
+    padding: 7px 0;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+.sidebar nav a:hover {
+    color: #d9ecff;
+
+    text-decoration: underline;
+}
+
+
+/* Page actuellement visitée */
+
+.sidebar nav a.active {
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENU PRINCIPAL
+   --------------------------------------------------------- */
+
+.page {
+    margin-left: 190px;
+
+    min-height: 100vh;
+
+    padding: 45px 60px 60px 60px;
+}
+
+
+/* ---------------------------------------------------------
+   LARGEUR DU CONTENU
+   --------------------------------------------------------- */
+
+.content {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.site-header {
+    margin-bottom: 25px;
+}
+
 
 .site-title {
     margin: 0;
 
+    color: #111111;
+
     font-size: 30px;
     font-weight: normal;
-
-    color: #111111;
 }
 
+
 .site-subtitle {
-    margin-top: 5px;
+    margin: 5px 0 20px;
 
     color: #555555;
+
     font-size: 14px;
 }
 
-header hr {
-    margin-top: 22px;
+
+.site-header hr {
+    margin: 0;
 
     border: 0;
+
     border-top: 1px solid #999999;
 }
 
 
-/* =====================================================
+/* ---------------------------------------------------------
    INFORMATIONS PERSONNELLES
-   ===================================================== */
+   --------------------------------------------------------- */
 
 .identity {
-    margin-top: 25px;
+    margin: 25px 0 35px;
 }
+
 
 .identity p {
     margin: 3px 0;
 }
 
+
 .identity .position {
     font-weight: bold;
 }
+
 
 .identity .institution {
     color: #444444;
 }
 
 
-/* =====================================================
-   MENU
-   ===================================================== */
-
-.navigation {
-    margin-top: 25px;
-    margin-bottom: 30px;
-
-    padding: 10px 0;
-
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
-}
-
-.navigation a {
-    margin-right: 18px;
-
-    color: #0645ad;
-
-    text-decoration: none;
-
-    font-size: 14px;
-}
-
-.navigation a:hover {
-    color: #cc0000;
-    text-decoration: underline;
-}
-
-
-/* =====================================================
-   CONTENU
-   ===================================================== */
-
-main {
-    padding-bottom: 50px;
-}
+/* ---------------------------------------------------------
+   TITRES
+   --------------------------------------------------------- */
 
 .page-title {
-    margin: 0 0 25px;
+    margin: 0 0 30px;
 
-    font-size: 25px;
+    color: #222222;
+
+    font-size: 26px;
     font-weight: normal;
-
-    color: #111111;
 }
 
+
 h2 {
-    margin-top: 30px;
-    margin-bottom: 12px;
+    margin: 30px 0 12px;
+
+    color: #222222;
 
     font-size: 19px;
     font-weight: normal;
-
-    color: #222222;
 }
 
+
 h3 {
-    margin-top: 25px;
-    margin-bottom: 8px;
+    margin: 25px 0 8px;
 
     font-size: 16px;
     font-weight: bold;
 }
+
+
+/* ---------------------------------------------------------
+   TEXTE
+   --------------------------------------------------------- */
 
 p {
     margin: 0 0 15px;
 }
 
 
-/* =====================================================
+section {
+    margin-bottom: 30px;
+}
+
+
+/* ---------------------------------------------------------
    LIENS
-   ===================================================== */
+   --------------------------------------------------------- */
 
 a {
-    color: #0645ad;
+    color: #0055a4;
+
     text-decoration: none;
 }
 
+
 a:hover {
     color: #cc0000;
+
     text-decoration: underline;
 }
 
 
-/* =====================================================
+/* ---------------------------------------------------------
    LISTES
-   ===================================================== */
+   --------------------------------------------------------- */
 
 ul {
-    margin-top: 8px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
 
     padding-left: 25px;
 }
 
+
 li {
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 }
 
 
-/* =====================================================
-   LISTES ACADÉMIQUES
-   ===================================================== */
-
-.publication {
-    margin-bottom: 18px;
-}
-
-.publication-title {
-    font-weight: normal;
-}
-
-.publication-authors {
-    color: #444444;
-}
-
-.publication-journal {
-    font-style: italic;
-    color: #555555;
-}
-
-
-/* =====================================================
-   CV
-   ===================================================== */
-
-.cv-section {
-    margin-bottom: 35px;
-}
-
-.cv-item {
-    margin-bottom: 15px;
-}
-
-.cv-date {
-    display: inline-block;
-
-    width: 120px;
-
-    vertical-align: top;
-
-    color: #555555;
-}
-
-.cv-description {
-    display: inline-block;
-
-    width: calc(100% - 125px);
-
-    vertical-align: top;
-}
-
-
-/* =====================================================
-   SÉPARATEURS
-   ===================================================== */
+/* ---------------------------------------------------------
+   SEPARATEURS
+   --------------------------------------------------------- */
 
 hr {
     margin: 30px 0;
 
     border: 0;
+
     border-top: 1px solid #dddddd;
 }
 
 
-/* =====================================================
-   PAGE D'ACCUEIL
-   ===================================================== */
+/* ---------------------------------------------------------
+   PUBLICATIONS
+   --------------------------------------------------------- */
 
-.welcome {
-    margin-top: 35px;
-}
-
-.welcome h2 {
-    margin-top: 0;
-}
-
-.note {
-    color: #666666;
-    font-size: 13px;
+.publication {
+    margin-bottom: 22px;
 }
 
 
-/* =====================================================
-   PIED DE PAGE
-   ===================================================== */
+.publication-title {
+    margin-bottom: 3px;
+}
+
+
+.publication-authors {
+    margin-bottom: 3px;
+
+    color: #444444;
+}
+
+
+.publication-journal {
+    color: #555555;
+
+    font-style: italic;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
 
 footer {
-    padding: 20px 0 40px;
+    margin-top: 60px;
+    padding-top: 15px;
 
     border-top: 1px solid #dddddd;
 
     color: #777777;
+
     font-size: 12px;
 }
 
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+/* ---------------------------------------------------------
+   VERSION MOBILE
+   --------------------------------------------------------- */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .container {
-        width: auto;
-        max-width: calc(100% - 30px);
-    }
+    .sidebar {
+        position: relative;
 
-    header {
-        padding-top: 25px;
-    }
-
-    .site-title {
-        font-size: 26px;
-    }
-
-    .navigation a {
-        display: inline-block;
-
-        margin-right: 12px;
-        margin-bottom: 5px;
-    }
-
-    .cv-date,
-    .cv-description {
-        display: block;
         width: 100%;
+        height: auto;
+
+        padding: 25px 25px;
     }
 
-    .cv-date {
-        margin-bottom: 3px;
+
+    .sidebar-name {
+        margin-bottom: 20px;
     }
+
+
+    .sidebar nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        gap: 0 20px;
+    }
+
+
+    .sidebar nav a {
+        padding: 4px 0;
+    }
+
+
+    .page {
+        margin-left: 0;
+
+        padding: 30px 25px 50px;
+    }
+
+
+    .content {
+        max-width: none;
+    }
+
 }
